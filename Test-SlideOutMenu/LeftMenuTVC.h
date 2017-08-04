@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LeftMenuTVC.h
 //  Test-SlideOutMenu
 //
 //  Created by Uber on 03/08/2017.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LeftMenuTVC : UITableViewController
 
 @end
-

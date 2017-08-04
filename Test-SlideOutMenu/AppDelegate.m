@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+@import LGSideMenuController;
+
+#import "MainTVC.h"
+#import "LeftMenuTVC.h"
+#import "RightMenuTVC.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +21,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    
+
+    
+
+    //[self.window makeKeyAndVisible];
+    //self.window.rootViewController = sideMenuController;
     return YES;
 }
 
