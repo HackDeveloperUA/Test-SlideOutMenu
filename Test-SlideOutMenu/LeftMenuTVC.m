@@ -22,6 +22,7 @@
 
 @implementation LeftMenuTVC
 
+
 - (id)init {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
@@ -34,18 +35,10 @@
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         self.tableView.contentInset = UIEdgeInsetsMake(44.0, 0.0, 44.0, 0.0);
         self.tableView.showsVerticalScrollIndicator = NO;
-        ///self.tableView.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
 
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-   
-
-}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 56.f;
@@ -62,11 +55,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
- 
-    
-    
     static NSString* identifier = @"LeftViewCell";
-    
     LeftViewCell* cell = (LeftViewCell*)[tableView dequeueReusableCellWithIdentifier:identifier];
     
     if(!cell){
@@ -80,26 +69,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-
-    // Тут все зависит от кого наследуемся. Может быть такая конструкция
-    // LGSideMenuController *leftSideMenu = self.sideMenuController;
-    // [leftSideMenu hideLeftViewAnimated:nil];
-    LGSideMenuController *leftSideMenu = self.sideMenuController;
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
     UINavigationController *mainNavContr = (UINavigationController *)self.sideMenuController.rootViewController;
-    
     MainTVC* mainTVC = (MainTVC*)mainNavContr.viewControllers[0];
-    
     [mainTVC updateTableContentWithCategory:indexPath.row];
-    
     // Но вообще-то можено использовать и так
     [self hideLeftViewAnimated:nil];
-
-    
-    
-    
-    //[mainViewController updateTableContentWithCategory:indexPath.row];
-    
-    
 
 }
 

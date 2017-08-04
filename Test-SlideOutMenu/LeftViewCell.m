@@ -25,16 +25,19 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier];
     if (self) {
+        /*
+         // Adding separators
+         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.backgroundColor = [UIColor darkGrayColor];
         
         self.textLabel.font = [UIFont boldSystemFontOfSize:16.0];
         self.textLabel.textColor = [UIColor lightGrayColor];
-        // -----
         
         self.separatorView = [UIView new];
         self.separatorView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.4];
         [self addSubview:self.separatorView];
+         */
     }
     return self;
 }
