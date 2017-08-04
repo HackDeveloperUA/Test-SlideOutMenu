@@ -72,11 +72,18 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     UINavigationController *mainNavContr = (UINavigationController *)self.sideMenuController.rootViewController;
-    MainTVC* mainTVC = (MainTVC*)mainNavContr.viewControllers[0];
-    [mainTVC updateTableContentWithCategory:indexPath.row];
-    // Но вообще-то можено использовать и так
+    
+    if (mainNavContr.viewControllers.count>0)
+    {
+        if ([mainNavContr.viewControllers[0] isKindOfClass:[MainTVC class]])
+        {
+            MainTVC* mainTVC = (MainTVC*)mainNavContr.viewControllers[0];
+            [mainTVC updateTableContentWithCategory:indexPath.row];
+        }
+    }
+    
+    
     [self hideLeftViewAnimated:nil];
-
 }
 
 @end

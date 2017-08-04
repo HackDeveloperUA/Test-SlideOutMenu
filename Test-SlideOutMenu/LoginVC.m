@@ -23,21 +23,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    
-    
-    /*
-    UIWindow *window = UIApplication.sharedApplication.delegate.window;
-    window.rootViewController = mainViewController;
-    
-    [UIView transitionWithView:window
-                      duration:0.3
-                       options:UIViewAnimationOptionTransitionCrossDissolve
-                    animations:nil
-                    completion:nil];
-    */
-    
-
-
 }
 
 
@@ -50,7 +35,6 @@
     RightMenuTVC* rightTVC = [[RightMenuTVC alloc] init];
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainTVC];
-    navigationController.navigationBar.translucent = YES;
     navigationController.navigationBar.barTintColor = [UIColor lightGrayColor];
     
     [navigationController.navigationBar setTitleTextAttributes:  @{NSForegroundColorAttributeName:[UIColor whiteColor],

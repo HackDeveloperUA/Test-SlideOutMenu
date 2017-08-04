@@ -98,21 +98,6 @@
     [self.sideMenuController showRightViewAnimated:YES completionHandler:nil];
 }
 
-- (void)showChooseController {
-   
-    // Return on main controller
-    /*
-    ChooseNavigationController *navigationController = [ChooseNavigationController new];
-    
-    UIWindow *window = UIApplication.sharedApplication.delegate.window;
-    window.rootViewController = navigationController;
-    
-    [UIView transitionWithView:window
-                      duration:0.3
-                       options:UIViewAnimationOptionTransitionCrossDissolve
-                    animations:nil
-                    completion:nil];
-     */
-}
+
 
 @end
