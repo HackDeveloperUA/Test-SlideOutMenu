@@ -15,6 +15,25 @@ The app starts with a screen LoginVC, then click the button SigIn. By clicking o
  
 ----
 
+##### DE:
+
+Ein Beispiel für die Implementierung der Slide-Out-Menü mit [LGSideMenuController](https://github.com/Friend-LGA/LGSideMenuController). Die Arbeit mit den Einschränkungen zusammen mit [FLKAutoLayout](https://github.com/floriankugler/FLKAutoLayout). Die app startet mit einem screen LoginVC, dann klicken Sie auf die Schaltfläche SigIn. Durch anklicken initialisiert mehrere Controller:
+
+-----
+
+##### PL:
+Przykład realizacji Slide-Out Menu za pomocą [LGSideMenuController](https://github.com/Friend-LGA/LGSideMenuController).
+Praca z constraintami wraz z [FLKAutoLayout](https://github.com/floriankugler/FLKAutoLayout) .
+Aplikacja startuje z ekranu LoginVC, dalej po naciśnięciu przycisku SigIn. Po kliknięciu na nią zainicjowany kilka kontrolerów:
+
+---
+
+##### JP:
+の実装例として、スライドウを使ったメニュー [LGSideMenuController](https://github.com/Friend-LGA/LGSideMenuController) ます。
+作業の制約付き [FLKAutoLayout](https://github.com/floriankugler/FLKAutoLayout)ます。
+アプリ起動画面LoginVC、そのボタンをクリックしSigInます。 をクリックするので初期化し複数のコントローラ:
+
+
 <br><br><br>
 
 
@@ -23,21 +42,20 @@ The app starts with a screen LoginVC, then click the button SigIn. By clicking o
 
  #import "LoginVC.m" 
  ```objective-c 
- 
-    MainTVC*  mainTVC  = [[MainTVC alloc] init];           // Главный экран таблица 
-    LeftMenuTVC*  leftTVC  = [[LeftMenuTVC alloc] init];   // Таблица для левого меню 
-    RightMenuTVC* rightTVC = [[RightMenuTVC alloc] init];  // Таблица для правого меню 
-     
-    // НавКотроллер на котором разместим кнопки вызова меню 
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainTVC]; 
-    
-    // Коренной контроллер для меню в который передаем настроенный NavContr(с mainTVC внутри) и боковыми контроллерами  
-    LGSideMenuController *sideMenuController = [LGSideMenuController sideMenuControllerWithRootViewController:navigationController  
-                                                                                           leftViewController:leftTVC 
-                                                                                         rightViewController:rightTVC];  
-    // Презентим на экран
-    [self presentViewController:sideMenuController animated:YES completion:nil];
 
+   MainTVC*  mainTVC  = [[MainTVC alloc] init];           // Главный экран таблица 
+   LeftMenuTVC*  leftTVC  = [[LeftMenuTVC alloc] init];   // Таблица для левого меню 
+   RightMenuTVC* rightTVC = [[RightMenuTVC alloc] init];  // Таблица для правого меню 
+    
+   // НавКотроллер на котором разместим кнопки вызова меню 
+   UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainTVC]; 
+   
+   // Коренной контроллер для меню в который передаем настроенный NavContr(с mainTVC внутри) и боковыми контроллерами  
+   LGSideMenuController *sideMenuController = [LGSideMenuController sideMenuControllerWithRootViewController:navigationController  
+                                                                                          leftViewController:leftTVC 
+                                                                                        rightViewController:rightTVC];  
+   // Презентим на экран
+   [self presentViewController:sideMenuController animated:YES completion:nil];
  ```  
  <br>
  
